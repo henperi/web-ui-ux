@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Animations</title>
+
+    <link rel="stylesheet" href="scss/main.css" />
+  </head>
+  <body>
+      <div class="card">
+        <div class="p-10">
+          <span class="animated-title">Hi, I am Henperi!</span>
+        </div>
+        <button class="button" onclick="handleClick()">Hire Me!</button>
+      </div>
+  </body>
+
+  <script>
+    const handleClick = () => {
+      const card = document.querySelector(".card");
+      if (!card.classList.contains("expand")) {
+        card.classList.toggle("expand");
+      }
+      // console.log(card.classList.contains('card'));
+    };
+  </script>
+</html>

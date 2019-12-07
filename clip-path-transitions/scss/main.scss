@@ -1,0 +1,90 @@
+body {
+  background: #f6f3f3;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+
+  .inner {
+    background: rgb(225, 57, 231);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    clip-path: circle(20% at 0% 0%);
+    transition: clip-path 1s ease-in-out;
+    cursor: pointer;
+
+    h1 {
+      margin: 0;
+    }
+
+    &:hover {
+      clip-path: circle(100%);
+    }
+  }
+}
+
+.inner-2 {
+  background: rgb(57, 124, 231);
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  clip-path: circle(10% at 90% 13%);
+  transition: all 0.9s ease-in-out;
+  cursor: pointer;
+
+  h1 {
+    margin: 0;
+  }
+
+  &:hover {
+    clip-path: circle(100%);
+    background: rgb(225, 57, 231);
+  }
+
+  &:hover span {
+    opacity: 0;
+  }
+
+  span {
+    float: right;
+    margin-right: 4%;
+    opacity: 1;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.container-3 {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+
+  .inner-3 {
+    background: rgb(57, 124, 231);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(100% - 40px);
+    clip-path: inset(0% 0% 0% 100%);
+    transition: all 1s ease-in-out;
+  }
+
+  &:hover .inner-3 {
+    clip-path: inset(0% 0% 0% 0%);
+  }
+}

@@ -1,0 +1,111 @@
+body {
+  background: #f6f3f3;
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.container {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+          box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+}
+
+.container .inner {
+  background: #e139e7;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  -webkit-clip-path: circle(20% at 0% 0%);
+          clip-path: circle(20% at 0% 0%);
+  -webkit-transition: -webkit-clip-path 1s ease-in-out;
+  transition: -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, -webkit-clip-path 1s ease-in-out;
+  cursor: pointer;
+}
+
+.container .inner h1 {
+  margin: 0;
+}
+
+.container .inner:hover {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+}
+
+.inner-2 {
+  background: #397ce7;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  -webkit-clip-path: circle(10% at 90% 13%);
+          clip-path: circle(10% at 90% 13%);
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+  cursor: pointer;
+}
+
+.inner-2 h1 {
+  margin: 0;
+}
+
+.inner-2:hover {
+  -webkit-clip-path: circle(100%);
+          clip-path: circle(100%);
+  background: #e139e7;
+}
+
+.inner-2:hover span {
+  opacity: 0;
+}
+
+.inner-2 span {
+  float: right;
+  margin-right: 4%;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.container-3 {
+  width: 30%;
+  background: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+          box-shadow: 14px 11px 46px 0px rgba(235, 174, 235, 0.75);
+}
+
+.container-3 .inner-3 {
+  background: #397ce7;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: calc(100% - 40px);
+  -webkit-clip-path: inset(0% 0% 0% 100%);
+          clip-path: inset(0% 0% 0% 100%);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.container-3:hover .inner-3 {
+  -webkit-clip-path: inset(0% 0% 0% 0%);
+          clip-path: inset(0% 0% 0% 0%);
+}
+/*# sourceMappingURL=main.css.map */

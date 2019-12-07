@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1616" height="1162" viewBox="0 0 1616 1162">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f3e7e9"/>
+      <stop offset="1" stop-color="#e3eeff"/>
+    </linearGradient>
+  </defs>
+  <g id="_094-Cloudy-Apple" data-name="094-Cloudy-Apple" opacity="0.5">
+    <path id="_094_Cloudy_Apple" data-name="094 Cloudy Apple" d="M0,0H1616V1162H0Z" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

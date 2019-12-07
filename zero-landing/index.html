@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zero</title>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <div class="hero">
+      <div class="banner">
+        <nav class="navbar">
+          <div class="logo navlinks__item">ZERO</div>
+          <div class="navlinks">
+            <a class="navlinks__item">Home</a>
+            <a class="navlinks__item">Pricing</a>
+            <a class="navlinks__item">Features</a>
+            <a class="navlinks__item">About</a>
+            <a class="navlinks__item">Price</a>
+          </div>
+        </nav>
+        <div class="banner__content">
+          <h4 class="hero__title">Get work done faster and better with us</h4>
+          <button class="button">Learn More</button>
+        </div>
+        <div class="banner__card">
+          <div class="fx__row align--center">
+            <img class="pr--20" src="assets/images/24-hours.svg" alt="" />
+            <div class="fx__column">
+              <span class="subtitle">24 Hours</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="fx__row align--center">
+            <img class="pr--20" src="assets/images/rising.svg" alt="" />
+            <div class="fx__column">
+              <span class="subtitle">Insight</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+          <div class="fx__row">
+            <img
+              class="pr--20"
+              src="assets/images/technical-support.svg"
+              alt=""
+            />
+            <div class="fx__column">
+              <span class="subtitle">Working</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="app__container">
+      <div class="fx__row pb--80">
+        <img class="pr--80" src="assets/images/COWORK.png" alt="" />
+        <div class="fx__column fx__column--align-center">
+          <h2 class="title">
+            Your <span>Work</span> Like At <span>Home</span>
+          </h2>
+          <p class="text">
+            Your work is going to fill a large part of your life, and the only
+            way to be truly satisfied is to do what you believe is great work.
+          </p>
+          <div>
+            <button class="button">View in Gallery</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="fx__row story">
+        " It’s not about money or connections – it’s the willingness to outwork
+        and outlearn everyone. "
+      </div>
+    </div>
+  </body>
+
+  <script>
+    const banner = document.querySelector(".banner");
+    const navbar = document.querySelector(".navbar");
+
+    const observer = new IntersectionObserver(
+      (entries, observer) => {
+        entries.map(entry => {
+          if (!entry.isIntersecting) {
+            navbar.classList.toggle("navbar--bg");
+          } else {
+            navbar.classList.remove("navbar--bg");
+          }
+        });
+      },
+      {
+        rootMargin: "-150px"
+      }
+    );
+
+    observer.observe(banner);
+  </script>
+</html>

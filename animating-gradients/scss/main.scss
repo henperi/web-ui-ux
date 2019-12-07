@@ -1,0 +1,104 @@
+:root {
+  --gradient: linear-gradient(45deg, #f62727, #f65727, #f67a27, #f6bf27);
+  // --gradient: linear-gradient(90deg, #f627c9, #aa27f6, #4627f6);
+}
+
+body {
+  background: #f6f3f3;
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-image: var(--gradient);
+  background-size: 300%;
+  animation: bg-animation 10s infinite alternate;
+}
+
+//animation frame
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes card-animation {
+  0% {
+    box-shadow: 20px 20px 26px 8px #bb1e03;
+  }
+  100% {
+    box-shadow: 20px 20px 26px 8px #bd4703;
+  }
+}
+
+@keyframes slide-animation {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.card {
+  background-color: rgb(251, 230, 230);
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 26px 8px #f62727;
+  width: 70%;
+  height: 50vh;
+  animation: card-animation 10s infinite alternate, slide-animation 4s;
+}
+
+.expand {
+  width: 90%;
+  height: 80vh;
+  background-color: white;
+  transition: all 2s ease-in-out;
+}
+
+.button {
+  background-image: var(--gradient);
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #f6f3f3;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  box-shadow: 6px 8px 28px 2px #c33d08a9;
+  border: none;
+}
+
+.p-10 {
+  padding: 20px 0;
+}
+
+.animated-title {
+  position: relative;
+  font-size: 28px;
+  padding: 2px 0;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient);
+    transform: scaleX(0.125);
+    transform-origin: left;
+    transition: transform 800ms ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}

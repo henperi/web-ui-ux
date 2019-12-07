@@ -1,0 +1,234 @@
+:root {
+  --primary: #ff8c57;
+  --text: #707070;
+  --card-shadow: 4px 6px 22px 1px rgba(0, 0, 0, 0.16);
+  --button-shadow: 4px 6px 22px 1px rgba(0, 0, 0, 0.16);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  height: 100vh;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  color: var(--text);
+}
+
+.app {
+  &__container {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+  }
+}
+
+.hero {
+  width: 100vw;
+  height: 900px;
+  position: relative;
+
+  &__title {
+    color: #fff;
+    font-size: 62px;
+  }
+}
+
+.banner {
+  height: 600px;
+  background-image: url("/zero-landing/assets/images/Banner.png");
+  background-color: yellowgreen;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+
+  &__content {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__card {
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -25%;
+    background-color: rgb(255, 255, 255);
+    padding: 0 25px;
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.navbar {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  color: #fff;
+  transition: all 900ms ease-in-out;
+
+  &--bg {
+    border-radius: 0 0 20px 20px;
+    background-color: var(--primary);
+    box-shadow: var(--card-shadow);
+    transform-origin: top;
+  }
+}
+
+.navlinks {
+  display: flex;
+
+  &__item {
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 20px 10px;
+    cursor: pointer;
+    position: relative;
+
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--primary);
+      transform: scaleX(0.225);
+      transform-origin: center;
+      transition: transform 800ms ease-in-out;
+    }
+  }
+}
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+/*
+========================================
+Buttons
+========================================
+*/
+.button {
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 25px;
+  background-color: var(--primary);
+  box-shadow: var(--button-shadow);
+  border: 0.8px solid transparent;
+}
+
+/*
+================================
+Display
+================================
+*/
+.fx__row {
+  display: flex;
+  flex-flow: row;
+}
+.fx__column {
+  display: flex;
+  flex-flow: column;
+
+  &--align-center {
+    justify-content: center;
+  }
+  &--align-space-b {
+    justify-content: space-between;
+  }
+  &--align-space-e {
+    justify-content: space-evenly;
+  }
+}
+
+/*
+============================
+Padding
+============================
+*/
+.pr {
+  &--20 {
+    padding-right: 20px;
+  }
+  &--80 {
+    padding-right: 80px;
+  }
+}
+.pb {
+  &--80 {
+    padding-bottom: 80px;
+  }
+}
+
+/*
+============================
+Text
+============================
+*/
+.title {
+  font-size: 52px;
+  color: #324a5e;
+  font-weight: normal;
+  position: relative;
+
+  span {
+    font-weight: bolder;
+  }
+}
+
+.subtitle {
+  font-size: 20px;
+  color: #324a5e;
+  font-weight: bold;
+}
+
+.text {
+  color: var(--text);
+  font-size: 16px;
+}
+
+.story {
+  font-style: italic;
+  color: #1d1d1d;
+  font-size: 40px;
+  text-align: center;
+  margin: 40px 4px;
+}

@@ -1,0 +1,49 @@
+:root {
+  --gradient: linear-gradient(45deg, #f62727, #f65727, #f67a27, #f6bf27);
+}
+
+body {
+  background: #f6f3f3;
+  margin: 0;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.section {
+  background-color: #ffbbbb;
+  padding: 25px;
+  border-radius: 10px;
+  -webkit-box-shadow: 20px 20px 60px 4px #89908e;
+          box-shadow: 20px 20px 60px 4px #89908e;
+  width: 40%;
+  margin: 10px 0;
+}
+
+.s2 {
+  background-color: aliceblue;
+}
+
+.expand {
+  width: 70%;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+}
+
+.button {
+  background-image: var(--gradient);
+  padding: 10px 20px;
+  font-size: 18px;
+  color: #f6f3f3;
+  cursor: pointer;
+  border-radius: 10px;
+  outline: none;
+  -webkit-box-shadow: 6px 12px 32px 2px #89908e;
+          box-shadow: 6px 12px 32px 2px #89908e;
+}
+/*# sourceMappingURL=main.css.map */
