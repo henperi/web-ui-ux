@@ -1,0 +1,97 @@
+@import "sass/variables.scss", "sass/mixins.scss";
+
+:root {
+  --appMargin: #{$appMargin};
+}
+
+html,
+body,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+
+  @include alignment("");
+}
+
+.col {
+  display: flex;
+  flex-flow: column;
+
+  @include alignment("");
+  @include generateColumns("");
+}
+
+.hidden {
+  display: none;
+}
+
+/*
+=====================
+Normal Desktop Devices and Below
+=====================
+*/
+@media screen and (max-width: 1200px) {
+  .col-lg {
+    @include generateColumns(".col-lg");
+  }
+  .hidden-lg-down {
+    display: none;
+  }
+}
+
+/*
+=====================
+Tablet Devices and Below
+=====================
+*/
+@media screen and (max-width: 768px) {
+  .col-md {
+    @include generateColumns("");
+  }
+  .hidden-md-down {
+    display: none;
+  }
+}
+
+/*
+=====================
+Mobile Devices and Below
+=====================
+*/
+@media screen and (max-width: 480px) {
+  .col-sm {
+    @include generateColumns("");
+  }
+  .hidden-sm-down {
+    display: none;
+  }
+}
+
+/*
+=====================
+Extra Small Mobile Devices and Below
+=====================
+*/
+@media screen and (max-width: 320px) {
+  .col-xs {
+    @include generateColumns("");
+  }
+  .hidden-xs-down {
+    display: none;
+  }
+}
